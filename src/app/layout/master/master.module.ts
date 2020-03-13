@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MasterComponent } from './master.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { CommonModule } from '@angular/common';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 export const routes: Routes = [
     {
@@ -30,7 +32,9 @@ export const routes: Routes = [
     imports: [
         RouterModule.forChild(routes),
         CommonModule,
-        BrowserModule
+        BrowserModule,
+        BrowserAnimationsModule,
+        AccordionModule.forRoot(),
     ],
 
     declarations: [

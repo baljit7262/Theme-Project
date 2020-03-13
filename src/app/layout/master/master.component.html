@@ -1,12 +1,246 @@
 <div class="main-div">
-    <div class="sidebar">sidebar</div>
+    <div class="sidebar">
+        <div class="logo">
+            <h5>ARETHOS ADMIN</h5>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a routerLink="/dashboard" routerLinkActive="active" class="dashboard-icon a-link">
+                    <i class="fas fa-th-large" style="margin-right: 12px;"></i>
+                   <span> Dashboard</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li>
+                <!-- <li><a routerLink="/dashboard" routerLinkActive="active">
+                    <i class="fab fa-buffer"></i>
+                   <span>Components</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li> -->
+                <div class="accordion-div" (click)="ArrowF=!ArrowF" (click)="Arrowf=!Arrowf">
+                    <i  class="arrow fas fa-angle-right accor-arrow" *ngIf="Arrowf"></i>
+                    <i class="arrow fas fa-angle-down accor-arrow" *ngIf="ArrowF"></i>
+                <accordion>
+                    <div class="icon-sidebar"><i class="fab fa-buffer"></i></div>
+                    <accordion-group heading="Components">
+                     <ul>
+                         <a class="a-link inner-icon">
+                            <li class="accor-items">
+                            <i class="far fa-dot-circle"></i>
+                            <span> Component1</span>
+                        </li></a>
+
+                        <a class="a-link inner-icon">
+                            <li class="accor-items">
+                            <i class="far fa-dot-circle"></i>
+                            <span> Component1</span>
+                        </li></a>
+
+                        <a class="a-link inner-icon">
+                            <li class="accor-items">
+                            <i class="far fa-dot-circle"></i>
+                            <span> Component1</span>
+                        </li></a>
+                     </ul>
+                    </accordion-group>
+                    </accordion></div>
+                <li><a class="a-link" routerLink="/dashboard" routerLinkActive="active">
+                    <i class="fas fa-calendar-minus"></i>
+                   <span>Elements</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li>
+                <li><a class="a-link" routerLink="/dashboard" routerLinkActive="active">
+                    <i class="fas fa-chart-area"></i>
+                   <span>Charts</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li>
+                <li><a class="a-link" routerLink="/dashboard" routerLinkActive="active">
+                    <i class="far fa-calendar-check"></i>
+                   <span>Calendar</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li>
+                <li><a class="a-link" routerLink="/dashboard" routerLinkActive="active">
+                    <i class="fas fa-tasks"></i>
+                   <span>Management</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li>
+                <!-- <li><a routerLink="/dashboard" routerLinkActive="active">
+                    <i class="fab fa-ethereum"></i>
+                   <span>Theme</span>
+                   <i  class="arrow fas fa-angle-right arrow-right"></i>
+                </a>
+                </li> -->
+               <div class="accordion-div" (click)="arrowHide=!arrowHide" (click)="ArrowHide=!ArrowHide">
+                    <i  class="arrow fas fa-angle-right accor-arrow" *ngIf="ArrowHide"></i>
+                    <i class="arrow fas fa-angle-down accor-arrow" *ngIf="arrowHide"></i>
+                <accordion>
+                    <div class="icon-sidebar"><i class="fab fa-buffer"></i></div>
+                    <accordion-group heading="Theme">
+                     <ul>
+                         <a class="a-link inner-icon">
+                            <li class="accor-items">
+                            <i class="far fa-dot-circle"></i>
+                            <span> Theme1</span>
+                        </li></a>
+                        
+                        <a class="a-link inner-icon">
+                            <li class="accor-items">
+                            <i class="far fa-dot-circle"></i>
+                            <span> Theme2</span>
+                        </li></a>
+
+                        <a class="a-link inner-icon">
+                            <li class="accor-items">
+                            <i class="far fa-dot-circle"></i>
+                            <span>Theme3</span>
+                        </li></a>
+                     </ul>
+                    </accordion-group>
+                    </accordion></div>
+            </ul>
+        </div>
+    </div>
     <div class="main-contant">
      <div class="topbar">
-         <ul>
+         <ul class="mr-auto">
             <form class="search-bar">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 <i class="fas fa-search"></i>
               </form>
+         </ul>
+         <ul class="align-items-center">
+             
+             <li><a><i class="far fa-envelope" (click)="messagesBar=!messagesBar"></i>
+                <span  class="badge badge-light badge-up">12</span></a>
+                <div class="notify-dropdown" *ngIf="messagesBar">
+                    <ul class="list-group">
+                        <li class="group-item d-flex justify-content-between justify-content-between">
+                            <div>You have <span>12</span> messages</div>
+                            <div class="badge-info bg-white">12</div>
+                        </li>
+                        <li class="group-item">
+                            <a>
+                             <img class="mes-img" src="../../../assets/images/avatar-14.png" alt="pic">
+                             <div>
+                                 <div class="head">New Register User</div>
+                                 <div class="pera">Lorem ipsum dolor sit amet..</div>
+                             </div>
+                            </a>
+                        </li>
+                        <li class="group-item">
+                         <a>
+                            <img class="mes-img" src="../../../assets/images/avatar-15.png" alt="pic">
+                            <div>
+                              <div class="head">New Register User</div>
+                              <div class="pera">Lorem ipsum dolor sit amet..</div>
+                          </div>
+                         </a>
+                     </li>
+                     <li class="group-item">
+                         <a>
+                            <img class="mes-img" src="../../../assets/images/avatar-16.png" alt="pic">
+                            <div>
+                              <div class="head">New Register User</div>
+                              <div class="pera">Lorem ipsum dolor sit amet..</div>
+                          </div>
+                         </a>
+                     </li>
+                     <li class="group-item">
+                         <a  class="all">                         
+                             See All Messages
+                              <!-- <div class="pera">Lorem ipsum dolor sit amet..</div> -->                      
+                         </a>
+                     </li>
+                    </ul> 
+                 </div></li>
+
+             <li><a ><i class="far fa-bell" (click)="notificationBar=!notificationBar"></i>
+                <span  class="badge badge-light badge-up badge-info">14</span></a>
+                <div class="notify-dropdown" *ngIf="notificationBar">
+                   <ul class="list-group">
+                       <li class="group-item d-flex justify-content-between justify-content-between">
+                           <div>You have <span>14</span> notification</div>
+                           <div class="badge-info">14</div>
+                       </li>
+                       <li class="group-item">
+                           <a>
+                            <i class="fas fa-user-friends text-info"></i>
+                            <div>
+                                <div class="head">New Register User</div>
+                                <div class="pera">Lorem ipsum dolor sit amet..</div>
+                            </div>
+                           </a>
+                       </li>
+                       <li class="group-item">
+                        <a>
+                            <i class="fas fa-coffee text-info text-warning"></i>
+                         <div>
+                             <div class="head">New Register User</div>
+                             <div class="pera">Lorem ipsum dolor sit amet..</div>
+                         </div>
+                        </a>
+                    </li>
+                    <li class="group-item">
+                        <a>
+                            <i class="fas fa-bell text-info text-danger"></i>
+                         <div>
+                             <div class="head">New Register User</div>
+                             <div class="pera">Lorem ipsum dolor sit amet..</div>
+                         </div>
+                        </a>
+                    </li>
+                    <li class="group-item">
+                        <a  class="all">
+                         
+                            See All Notifications
+                             <!-- <div class="pera">Lorem ipsum dolor sit amet..</div> -->
+                         
+                        </a>
+                    </li>
+                   </ul> 
+                </div></li>
+
+             <li><span class="profile-img" (click)="show=!show">
+                 <img src="../../../assets/images/avatar-14.png" alt="Profile Pic">
+                <div class="profile-dropdown" *ngIf="show">
+                    
+                            <a href="" class="employee">
+                                <div class="media-m">
+                                    <img src="../../../assets/images/avatar-14.png" alt="Profile Pic">
+                                </div>
+                                <div class="detail">
+                                    <h5>Jhon Denial</h5>
+                                    <p>jhon@example.com</p>
+                                </div>
+                            </a>
+                            <a href="" class="employee">
+                                <span class="option">
+                                    <i class="far fa-envelope"></i>
+                                    inbox </span> 
+                            </a>
+                            <a href="" class="employee">
+                                <span class="option">
+                                <i class="far fa-user-circle"></i>
+                              Account </span>
+                            </a>
+                            <a href="" class="employee">
+                                <span class="option">
+                                <i class="fas fa-cog"></i>
+                             Setting </span> 
+                          </a> 
+                            <a href="" class="employee">
+                                <span class="option">
+                                <i class="fas fa-power-off"></i>
+                            Logout  </span> 
+                            </a> 
+                        
+                </div></span>
+                </li>
+
          </ul>
      </div>
      <div class="content">

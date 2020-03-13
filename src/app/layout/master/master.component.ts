@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master.component.scss']
 })
 export class MasterComponent implements OnInit {
+  show=false;
+  notificationBar=false;
+  messagesBar=false;
+  arrowHide=false;
+  ArrowHide=true;
+  ArrowF=false;
+  Arrowf=true;
 
   constructor() { }
 
